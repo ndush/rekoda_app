@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "548500342908",
+    "firebase_url": "https://rekodaapp-default-rtdb.firebaseio.com",
+    "project_id": "rekodaapp",
+    "storage_bucket": "rekodaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548500342908:android:62680d905c6a3e704621f9",
+        "android_client_info": {
+          "package_name": "com.rekoda_app.rekoda_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBviHc-mYseGqmez257EpOt3GN59ikGKXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

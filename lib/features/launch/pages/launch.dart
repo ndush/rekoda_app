@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rekoda_app/gen/assets.gen.dart';
 
 class LaunchPage extends StatelessWidget {
-  const LaunchPage({Key? key}) : super(key: key);
+  const LaunchPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,11 +11,11 @@ class LaunchPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Container(),
-        title: Text(""),
+        title: const Text(""),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.arrow_forward),
+            icon: const Icon(Icons.arrow_forward),
             color: Colors.white,
             onPressed: () {
               Navigator.pushNamed(context, '/onboarding_1'); // Navigate to Onboarding_1

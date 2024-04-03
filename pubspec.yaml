@@ -37,7 +37,17 @@ dependencies:
   cupertino_icons: ^1.0.6
   build_runner: ^2.4.9
   flutter_gen_runner: ^5.4.0
+  firebase_auth: ^4.19.0
+  equatable: ^2.0.0
+  firebase_core: ^2.28.0
+  flutter_bloc: ^8.0.0
 
+
+
+
+
+  bloc: any
+  provider: any
 dev_dependencies:
   flutter_test:
     sdk: flutter

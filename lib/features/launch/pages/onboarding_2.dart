@@ -4,6 +4,8 @@ import 'package:rekoda_app/features/launch/pages/get_started.dart';
 import 'package:rekoda_app/gen/assets.gen.dart';
 
 class Onboarding2 extends StatelessWidget {
+  const Onboarding2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,19 +15,19 @@ class Onboarding2 extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 70),
+              const SizedBox(height: 70),
               SizedBox(
                 height: 350,
                 width: 350,
                 child: Assets.analysis.image(),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
 
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                     width: 20, // Adjust width as needed
                     height: 10, // Adjust height as needed
                     decoration: BoxDecoration(
@@ -35,16 +37,16 @@ class Onboarding2 extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                     width: 20, // Adjust width as needed
                     height: 10, // Adjust height as needed
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5), // Circular edges
-                      color: Color(0xFF680DB3),
+                      color: const Color(0xFF680DB3),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                     width: 20, // Adjust width as needed
                     height: 10, // Adjust height as needed
                     decoration: BoxDecoration(
@@ -54,8 +56,8 @@ class Onboarding2 extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 70),
-              Padding(
+              const SizedBox(height: 70),
+              const Padding(
                 padding: EdgeInsets.only(left: 16, right: 16),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -86,7 +88,7 @@ class Onboarding2 extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 100), // Added some extra space at the bottom
+              const SizedBox(height: 100), // Added some extra space at the bottom
             ],
           ),
         ),
@@ -103,7 +105,7 @@ class Onboarding2 extends StatelessWidget {
                 onPressed: () {
                   // Handle skip button tap
                 },
-                child: Text(
+                child: const Text(
                   'Skip',
                   style: TextStyle(
                     fontSize: 18,
@@ -113,22 +115,22 @@ class Onboarding2 extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Next',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.black,
                     ),
                   ),
-                  SizedBox(width: 5),
+                  const SizedBox(width: 5),
                   IconButton(
                     onPressed: () {
                       Navigator.push( // Navigate to Onboarding2 page
                         context,
-                        MaterialPageRoute(builder: (context) => GetStarted()),
+                        MaterialPageRoute(builder: (context) => const GetStarted()),
                       );
                     },
-                    icon: Icon(Icons.arrow_forward),
+                    icon: const Icon(Icons.arrow_forward),
                     iconSize: 30,
                     color: Colors.black,
                   ),

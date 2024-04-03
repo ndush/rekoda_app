@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:rekoda_app/features/signup/pages/create_account.dart';
 import 'package:rekoda_app/gen/assets.gen.dart';
 
 class GetStarted extends StatelessWidget {
+  const GetStarted({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // Define custom button color
-    final buttonColor = Color(0xFF680DB3);
+    const buttonColor = Color(0xFF680DB3);
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -14,20 +16,18 @@ class GetStarted extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 70),
+              const SizedBox(height: 70),
               SizedBox(
                 height: 350,
                 width: 350,
-                child: Assets.asset.image(), // Use the generated image widget
+                child: Assets.asset.image(),
               ),
-              SizedBox(height: 20),
-              // Your indicators row goes here
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Indicator containers
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                     width: 20,
                     height: 10,
                     decoration: BoxDecoration(
@@ -36,7 +36,7 @@ class GetStarted extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                     width: 20,
                     height: 10,
                     decoration: BoxDecoration(
@@ -45,19 +45,18 @@ class GetStarted extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                     width: 20,
                     height: 10,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Color(0xFF680DB3),
+                      color: const Color(0xFF680DB3),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 70),
-              // Your text widgets go here
-              Padding(
+              const SizedBox(height: 70),
+              const Padding(
                 padding: EdgeInsets.only(left: 16, right: 16),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -91,7 +90,7 @@ class GetStarted extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(bottom: 40.0), // Add bottom padding
+        padding: const EdgeInsets.only(bottom: 40.0),
         child: BottomAppBar(
           color: Colors.white,
           elevation: 0,
@@ -102,24 +101,23 @@ class GetStarted extends StatelessWidget {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
-                      // Handle Get Started button tap
+                      // Navigate to CreateAccountScreen
                       Navigator.push(
-                        // Navigate to GetStarted page
                         context,
-                        MaterialPageRoute(builder: (context) => GetStarted()),
+                        MaterialPageRoute(builder: (context) => const CreateAccountScreen()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(vertical: 10), // Increase padding
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(0), // Make it square edged
+                        borderRadius: BorderRadius.circular(0),
                       ),
-                      backgroundColor: buttonColor, // Set the background color of the button
-                      textStyle: TextStyle(
+                      backgroundColor: buttonColor,
+                      textStyle: const TextStyle(
                         fontSize: 18,
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Get Started',
                       style: TextStyle(
                         color: Colors.white,
