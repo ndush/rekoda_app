@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
   final String label;
-  final Function(String newText) onChanged;
+  final Function(String) onChanged;
   final bool isPassword;
   final bool isEmail;
+  final Widget? suffixIcon;
 
-  const CustomTextField({super.key, 
+  const CustomTextField({
+    super.key,
     required this.label,
     required this.onChanged,
     this.isPassword = false,
     this.isEmail = false,
+    this.suffixIcon,
   });
 
   @override
@@ -33,6 +36,7 @@ class CustomTextField extends StatelessWidget {
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: label,
+              suffixIcon: suffixIcon,
             ),
             onChanged: onChanged,
             keyboardType: isEmail ? TextInputType.emailAddress : TextInputType.text,
