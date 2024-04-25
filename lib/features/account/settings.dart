@@ -31,7 +31,7 @@ class Settings extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
         children: [
-          // General Section
+
           const ListTile(
             title: Text(
               "General",
@@ -62,7 +62,7 @@ class Settings extends StatelessWidget {
             onTap: () {
             },
           ),
-          // Security Section
+
           const ListTile(
             title: Text(
               "Security",
@@ -85,7 +85,7 @@ class Settings extends StatelessWidget {
           const ListTile(
             title: Text("Choose what data you share with us"),
           ),
-          // Logout Button
+
           const SizedBox(height: 180.0),
           ElevatedButton(
             onPressed: () {
