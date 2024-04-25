@@ -20,7 +20,7 @@ class VerifyAccount extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).padding.top, // To adjust for the status bar height
+                  height: MediaQuery.of(context).padding.top,
                 ),
                 Image.asset(
                   'assets/env.png',

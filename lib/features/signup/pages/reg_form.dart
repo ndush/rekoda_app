@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rekoda_app/features/dashboard/new_user.dart';
 
 class RegForm extends StatefulWidget {
-  const RegForm({Key? key}) : super(key: key);
+  const RegForm({super.key});
 
   @override
   _RegFormState createState() => _RegFormState();

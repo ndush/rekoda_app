@@ -52,7 +52,7 @@ class _ExistingUserExpenseState extends State<ExistingUserExpense> {
                       ),
                       child: TextButton(
                         onPressed: () {
-                          // Handle Expenses button tap
+
                         },
                         child: const Text(
                           'Expenses',
@@ -98,14 +98,14 @@ class _ExistingUserExpenseState extends State<ExistingUserExpense> {
             ),
             IconButton(
               onPressed: () {
-                // Handle plus button tap
+
               },
               icon: const Icon(Icons.add, color: Colors.black),
               iconSize: 24,
             ),
             IconButton(
               onPressed: () {
-                // Handle menu icon tap
+
               },
               icon: const Icon(Icons.more_vert, color: Colors.black),
               iconSize: 32,
@@ -141,7 +141,7 @@ class _ExistingUserExpenseState extends State<ExistingUserExpense> {
                       ),
                       child: IconButton(
                         onPressed: () {
-                          // Handle backward arrow tap
+
                         },
                         icon: const Icon(Icons.arrow_forward_ios_rounded, color: Color(0xFF212121), size: 24),
                       ),
@@ -165,7 +165,7 @@ class _ExistingUserExpenseState extends State<ExistingUserExpense> {
                       ),
                       child: IconButton(
                         onPressed: () {
-                          // Handle forward arrow tap
+
                         },
                         icon: const Icon(Icons.arrow_back_ios, color: Color(0xFF212121), size: 24),
                       ),
@@ -321,7 +321,7 @@ class _ExistingUserExpenseState extends State<ExistingUserExpense> {
                         ),
                       ),
                       trailing: SizedBox(
-                        width: 100, // Adjust width as needed
+                        width: 100,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -393,7 +393,7 @@ class _ExistingUserExpenseState extends State<ExistingUserExpense> {
                         ),
                       ),
                       trailing: SizedBox(
-                        width: 100, // Adjust width as needed
+                        width: 100,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -465,7 +465,7 @@ class _ExistingUserExpenseState extends State<ExistingUserExpense> {
                         ),
                       ),
                       trailing: SizedBox(
-                        width: 100, // Adjust width as needed
+                        width: 100,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -484,14 +484,14 @@ class _ExistingUserExpenseState extends State<ExistingUserExpense> {
                                   width: 0.5,
                                   color: const Color(0xFFFF0F0F),
                                 ),
-                                // Adjust background color using BoxDecoration
+
                                 color: const Color.fromRGBO(51, 204, 75, 0.07),
                               ),
                               padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                               child: const Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween, // Similar to justify-content: center
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  SizedBox(width: 10), // Similar to gap: 10px
+                                  SizedBox(width: 10),
                                   Text(
                                     'Paid in full',
                                     style: TextStyle(
@@ -523,7 +523,6 @@ class _ExistingUserExpenseState extends State<ExistingUserExpense> {
   }
 
   Widget _buildContent() {
-    // Your main content here
     return Container(
       color: const Color(0xFFD8A9FF),
     );

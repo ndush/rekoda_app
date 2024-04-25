@@ -12,37 +12,37 @@ class ExistingUser extends StatelessWidget {
     String? dynamicText,
   }) {
     return Container(
-      width: 170, // Adjust the width of the container
-      height: 120, // Adjust the height of the container
+      width: 170,
+      height: 120,
       padding: const EdgeInsets.all(10.0),
       margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(9),
-        color: const Color(0xFFFFFFFF), // or use your custom color
+        color: const Color(0xFFFFFFFF),
       ),
       child: Row(
         children: [
           Container(
-            width: 30, // Adjust the width of the icon container
-            height: 30, // Adjust the height of the icon container
+            width: 30,
+            height: 30,
             decoration: hasIconBackground
                 ? BoxDecoration(
-              borderRadius: BorderRadius.circular(25), // Making it circular
+              borderRadius: BorderRadius.circular(25),
               color: const Color(0xFFFAF4FF),
             )
                 : null,
             child: Center(child: icon),
           ),
-          const SizedBox(width: 10), // Adding space between icon and text
+          const SizedBox(width: 10),
           Expanded(
             child: content ?? Container(),
           ),
           Text(
             dynamicText ?? '',
             style: const TextStyle(
-              color: Colors.green, // Change this to the color you want
+              color: Colors.green,
               fontFamily: "DM Sans",
-              fontSize: 12.0, // Adjust the font size
+              fontSize: 12.0,
               fontWeight: FontWeight.w500,
             ),
           ),
@@ -58,13 +58,13 @@ class ExistingUser extends StatelessWidget {
     required String percentage,
   }) {
     return Container(
-      width: 179.905, // Adjust the width of the container
-      height: 119, // Adjust the height of the container
+      width: 179.905,
+      height: 119,
       margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-      padding: const EdgeInsets.all(10.0), // Padding added
+      padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(14),
-        color: const Color(0xFFFFF4DE), // or use your custom color
+        color: const Color(0xFFFFF4DE),
       ),
       child: Stack(
         children: [
@@ -105,7 +105,7 @@ class ExistingUser extends StatelessWidget {
                       fontFamily: "Roboto",
                       fontSize: 12,
                       fontWeight: FontWeight.w700,
-                      height: 1.2, // Corresponds to 120%
+                      height: 1.2,
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -116,7 +116,7 @@ class ExistingUser extends StatelessWidget {
                       fontFamily: "Roboto",
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
-                      height: 1.2, // Corresponds to 120%
+                      height: 1.2,
                     ),
                   ),
                 ],
@@ -168,7 +168,7 @@ class ExistingUser extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.more_vert),
             onPressed: () {
-              // Handle more_vert action
+
             },
           ),
         ],
@@ -177,7 +177,7 @@ class ExistingUser extends StatelessWidget {
         child: Column(
           children: [
             const Charts(),
-            const SizedBox(height: 10), // Adding space between charts and cards
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -196,7 +196,7 @@ class ExistingUser extends StatelessWidget {
                         style: TextStyle(
                           color: Color(0xFFA3AED0),
                           fontFamily: "DM Sans",
-                          fontSize: 12.0, // Adjust the font size
+                          fontSize: 12.0,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -205,7 +205,7 @@ class ExistingUser extends StatelessWidget {
                         style: TextStyle(
                           color: Color(0xFF2B3674),
                           fontFamily: "DM Sans",
-                          fontSize: 20.0, // Adjust the font size
+                          fontSize: 20.0,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -222,7 +222,7 @@ class ExistingUser extends StatelessWidget {
                         style: TextStyle(
                           color: Color(0xFFA3AED0),
                           fontFamily: "DM Sans",
-                          fontSize: 12.0, // Adjust the font size
+                          fontSize: 12.0,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -231,7 +231,7 @@ class ExistingUser extends StatelessWidget {
                         style: TextStyle(
                           color: Color(0xFF2B3674),
                           fontFamily: "DM Sans",
-                          fontSize: 20.0, // Adjust the font size
+                          fontSize: 20.0,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -240,12 +240,12 @@ class ExistingUser extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 10), // Adding space between the rows of cards
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 buildContainer(
-                  hasIconBackground: false, // Set to false to remove the icon background
+                  hasIconBackground: false,
                   content: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -255,7 +255,7 @@ class ExistingUser extends StatelessWidget {
                         style: TextStyle(
                           color: Color(0xFFA3AED0),
                           fontFamily: "DM Sans",
-                          fontSize: 12.0, // Adjust the font size
+                          fontSize: 12.0,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -264,7 +264,7 @@ class ExistingUser extends StatelessWidget {
                         style: TextStyle(
                           color: Color(0xFF2B3674),
                           fontFamily: "DM Sans",
-                          fontSize: 20.0, // Adjust the font size
+                          fontSize: 20.0,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -272,13 +272,13 @@ class ExistingUser extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  width: 180, // Adjust the width of the container
-                  height: 120, // Adjust the height of the container
+                  width: 180,
+                  height: 120,
                   margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-                  padding: const EdgeInsets.all(10.0), // Padding added
+                  padding: const EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(9),
-                    color: const Color(0xFFFFFFFF), // or use your custom color
+                    color: const Color(0xFFFFFFFF),
                   ),
                   child: Row(
                     children: [
@@ -323,11 +323,11 @@ class ExistingUser extends StatelessWidget {
                             child: Row(
                               children: [
                                 Image.asset(
-                                  'assets/nigeria_flag.png', // Adjust image path
+                                  'assets/nigeria_flag.png',
                                   width: 20,
                                   height: 20,
                                 ),
-                                const SizedBox(width: 8), // Add some space between the flag and the text
+                                const SizedBox(width: 8),
                                 const Text('Nigeria'),
                               ],
                             ),
@@ -337,11 +337,11 @@ class ExistingUser extends StatelessWidget {
                             child: Row(
                               children: [
                                 Image.asset(
-                                  'assets/nigeria_flag.png', // Adjust image path
+                                  'assets/nigeria_flag.png',
                                   width: 20,
                                   height: 20,
                                 ),
-                                const SizedBox(width: 8), // Add some space between the flag and the text
+                                const SizedBox(width: 8),
                                 const Text('Kenya'),
                               ],
                             ),
@@ -351,11 +351,11 @@ class ExistingUser extends StatelessWidget {
                             child: Row(
                               children: [
                                 Image.asset(
-                                  'assets/nigeria_flag.png', // Adjust image path
+                                  'assets/nigeria_flag.png',
                                   width: 20,
                                   height: 20,
                                 ),
-                                const SizedBox(width: 8), // Add some space between the flag and the text
+                                const SizedBox(width: 8),
                                 const Text('Ghana'),
                               ],
                             ),
@@ -364,11 +364,11 @@ class ExistingUser extends StatelessWidget {
                         child: Row(
                           children: [
                             Image.asset(
-                              'assets/nigeria_flag.png', // Adjust image path
+                              'assets/nigeria_flag.png',
                               width: 20,
                               height: 20,
                             ),
-                            const Icon(Icons.arrow_drop_down), // Adding dropdown arrow icon
+                            const Icon(Icons.arrow_drop_down),
                           ],
                         ),
                         onSelected: (value) {
@@ -381,7 +381,7 @@ class ExistingUser extends StatelessWidget {
 
               ],
             ),
-            const SizedBox(height: 10), // Adding space between the cards and the text
+            const SizedBox(height: 10),
             const Padding(
               padding: EdgeInsets.only(left: 15.0),
               child: Align(
@@ -414,7 +414,7 @@ class ExistingUser extends StatelessWidget {
                     value: '1',
                     percentage: '+1,20%',
                   ),
-                  // Add more dynamic containers here
+
                 ],
               ),
             ),
@@ -434,7 +434,7 @@ class ExistingUser extends StatelessWidget {
                     value: '1',
                     percentage: '+1,20%',
                   ),
-                  // Add more dynamic containers here
+
                 ],
               ),
             ),

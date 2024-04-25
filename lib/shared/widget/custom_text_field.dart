@@ -6,15 +6,17 @@ class CustomTextField extends StatelessWidget {
   final bool isPassword;
   final bool isEmail;
   final Widget? suffixIcon;
+  final TextEditingController? controller;
 
   const CustomTextField({
-    super.key,
+    Key? key,
     required this.label,
     required this.onChanged,
     this.isPassword = false,
     this.isEmail = false,
     this.suffixIcon,
-  });
+    this.controller,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +35,7 @@ class CustomTextField extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8),
           margin: const EdgeInsets.only(top: 8),
           child: TextField(
+            controller: controller,
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: label,

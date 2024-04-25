@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'sales.dart';
 import 'transaction.dart';
 import 'custom_bottom_navigation_bar.dart';
-import 'add_expense.dart'; // Import the AddExpense screen
+import 'add_expense.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -62,7 +62,7 @@ class _ExpensesState extends State<Expenses> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const AddExpense()), // Navigate to AddExpense screen
+            MaterialPageRoute(builder: (context) => const AddExpense()),
           );
         },
         backgroundColor: const Color(0xFF680DB3),

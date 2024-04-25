@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rekoda_app/features/Transactions/custom_bottom_navigation_bar.dart';
 import 'package:rekoda_app/features/account/settings.dart';
-import 'package:rekoda_app/features/account/user_view.dart'; // Import your UserView
+import 'package:rekoda_app/features/account/user_view.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -27,7 +28,6 @@ class _ProfileViewState extends State<ProfileView> {
             const Spacer(),
             GestureDetector(
               onTap: () {
-                // Navigate to UserView when "My Account" is tapped
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const UserView()),
@@ -59,14 +59,14 @@ class _ProfileViewState extends State<ProfileView> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        'John Doe',
+                        'Enny',
                         style: TextStyle(
                           fontSize: 24.0,
                           color: Colors.white,
                         ),
                       ),
                       Text(
-                        'johndoe@example.com',
+                        'Enny@mail.com',
                         style: TextStyle(
                           fontSize: 18.0,
                           color: Colors.white.withOpacity(0.8),
@@ -82,11 +82,11 @@ class _ProfileViewState extends State<ProfileView> {
             left: 0,
             right: 0,
             bottom: 0,
-            top: 120, // Adjusted value to push it below the profile image
+            top: 120,
             child: Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(16.0),
                   topRight: Radius.circular(16.0),
                 ),
@@ -95,10 +95,24 @@ class _ProfileViewState extends State<ProfileView> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   ListTile(
-                    leading: const Icon(Icons.account_circle),
+                    leading: Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFE9E9FF),
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/User.svg',
+                          width: 24,
+                          height: 24,
+                          color: const Color(0xFF928FFF),
+                        ),
+                      ),
+                    ),
                     title: const Text('My Account'),
                     onTap: () {
-                      // Navigate to UserView when "My Account" is tapped
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const UserView()),
@@ -106,10 +120,24 @@ class _ProfileViewState extends State<ProfileView> {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.settings),
+                    leading: Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFE9E9FF),
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/Cog.svg',
+                          width: 24,
+                          height: 24,
+                          color: const Color(0xFF928FFF),
+                        ),
+                      ),
+                    ),
                     title: const Text('Settings'),
                     onTap: () {
-                      // Navigate to Settings view when "Settings" is tapped
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const Settings()),
@@ -117,28 +145,47 @@ class _ProfileViewState extends State<ProfileView> {
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.help),
+                    leading: Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFE9E9FF),
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/Question.svg',
+                          width: 24,
+                          height: 24,
+                          color: const Color(0xFF928FFF),
+                        ),
+                      ),
+                    ),
                     title: const Text('Help Center'),
                     onTap: () {
-                      // Handle help center action
+
                     },
                   ),
                   ListTile(
-                    leading: const Icon(Icons.contact_phone),
-                    title: const Text('Contact'),
-                    onTap: () {
-                      // Handle contact action
-                    },
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Text(
-                      'You joined Brees on September 2021. It’s been 1 month since then and our mission is still the same, help you better manage your finance like a brees.',
-                      style: TextStyle(
-                        fontSize: 14.0,
-                        color: Colors.grey[700],
+                    leading: Container(
+                      width: 48,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFE9E9FF),
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      child: Center(
+                        child: SvgPicture.asset(
+                          'assets/Phone.svg',
+                          width: 24,
+                          height: 24,
+                          color: const Color(0xFF928FFF),
+                        ),
                       ),
                     ),
+                    title: const Text('Contact'),
+                    onTap: () {
+                    },
                   ),
                 ],
               ),
@@ -150,5 +197,3 @@ class _ProfileViewState extends State<ProfileView> {
     );
   }
 }
-
-

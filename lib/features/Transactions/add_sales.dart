@@ -19,7 +19,7 @@ class AddSales extends StatelessWidget {
         title: const Text(
           'Add Sales',
           style: TextStyle(
-            color: Color(0xFF1F2A37), // Use custom gray color
+            color: Color(0xFF1F2A37),
             fontSize: 18,
             fontWeight: FontWeight.bold,
             fontFamily: 'Roboto',
@@ -43,7 +43,7 @@ class AddSales extends StatelessWidget {
                         const Text(
                           'Invoice Number',
                           style: TextStyle(
-                            color: Color(0xFF111928), // Use custom gray color
+                            color: Color(0xFF111928),
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
@@ -53,7 +53,7 @@ class AddSales extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                            color: const Color(0xFFBCBBC1).withOpacity(0.2),
                           ),
                           child: const TextField(
                             decoration: InputDecoration(
@@ -73,7 +73,7 @@ class AddSales extends StatelessWidget {
                         const Text(
                           'Date Issued',
                           style: TextStyle(
-                            color: Color(0xFF111928), // Use custom gray color
+                            color: Color(0xFF111928),
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
@@ -83,7 +83,7 @@ class AddSales extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                            color: const Color(0xFFBCBBC1).withOpacity(0.2),
                           ),
                           child: const TextField(
                             decoration: InputDecoration(
@@ -101,7 +101,7 @@ class AddSales extends StatelessWidget {
               const Text(
                 'Customer Name',
                 style: TextStyle(
-                  color: Color(0xFF111928), // Use custom gray color
+                  color: Color(0xFF111928),
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Roboto',
@@ -111,7 +111,7 @@ class AddSales extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                  color: const Color(0xFFBCBBC1).withOpacity(0.2),
                 ),
                 child: const TextField(
                   decoration: InputDecoration(
@@ -124,7 +124,7 @@ class AddSales extends StatelessWidget {
               const Text(
                 'Product',
                 style: TextStyle(
-                  color: Color(0xFF111928), // Use custom gray color
+                  color: Color(0xFF111928),
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Roboto',
@@ -134,7 +134,7 @@ class AddSales extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                  color: const Color(0xFFBCBBC1).withOpacity(0.2),
                 ),
                 child: const Row(
                   children: [
@@ -160,7 +160,7 @@ class AddSales extends StatelessWidget {
                         const Text(
                           'Price',
                           style: TextStyle(
-                            color: Color(0xFF111928), // Use custom gray color
+                            color: Color(0xFF111928),
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
@@ -170,9 +170,9 @@ class AddSales extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                            color: const Color(0xFFBCBBC1).withOpacity(0.2),
                           ),
-                          child: const TextField(
+                          child:  const TextField(
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
                               border: InputBorder.none,
@@ -190,7 +190,7 @@ class AddSales extends StatelessWidget {
                         const Text(
                           'Quantity',
                           style: TextStyle(
-                            color: Color(0xFF111928), // Use custom gray color
+                            color: Color(0xFF111928),
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
@@ -200,9 +200,9 @@ class AddSales extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                            color: const Color(0xFFBCBBC1).withOpacity(0.2),
                           ),
-                          child: const TextField(
+                          child:  const TextField(
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
                               border: InputBorder.none,
@@ -218,7 +218,7 @@ class AddSales extends StatelessWidget {
               const Text(
                 'Payment Method',
                 style: TextStyle(
-                  color: Color(0xFF111928), // Use custom gray color
+                  color: Color(0xFF111928),
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Roboto',
@@ -228,13 +228,13 @@ class AddSales extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                  color: const Color(0xFFBCBBC1).withOpacity(0.2),
                 ),
                 child: Row(
                   children: [
                     Expanded(
                       child: TextField(
-                        controller: TextEditingController(text: 'Select Option'), // Assign the controller here
+                        controller: TextEditingController(text: 'Select Option'),
                         decoration: const InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
                           border: InputBorder.none,
@@ -251,7 +251,7 @@ class AddSales extends StatelessWidget {
               const Text(
                 'Sales Channel',
                 style: TextStyle(
-                  color: Color(0xFF111928), // Use custom gray color
+                  color: Color(0xFF111928),
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Roboto',
@@ -261,13 +261,13 @@ class AddSales extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                  color: const Color(0xFFBCBBC1).withOpacity(0.2),
                 ),
                 child: Row(
                   children: [
                     Expanded(
                       child: TextField(
-                        controller: TextEditingController(text: 'Select Option'), // Assign the controller here
+                        controller: TextEditingController(text: 'Select Option'),
                         decoration: const InputDecoration(
                           contentPadding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
                           border: InputBorder.none,
@@ -285,7 +285,7 @@ class AddSales extends StatelessWidget {
               const Text(
                 'Note/ Additional information',
                 style: TextStyle(
-                  color: Color(0xFF111928), // Use custom gray color
+                  color: Color(0xFF111928),
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Roboto',
@@ -295,7 +295,7 @@ class AddSales extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: const Color(0xFF888888)), // Use custom gray color
+                  border: Border.all(color: const Color(0xFF888888)),
                   color: Colors.white,
                 ),
                 child: const SizedBox(
@@ -313,14 +313,13 @@ class AddSales extends StatelessWidget {
               ),
 
               const SizedBox(height: 16),
-              // New Widget: "Add Expense" Button
+
               Container(
                 width: 370,
                 height: 44,
-                // padding: EdgeInsets.symmetric(vertical: 8, horizontal: 166),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: const Color(0xFF680DB3), // Use custom purple color
+                  color: const Color(0xFF680DB3),
                 ),
                 child: TextButton(
                   onPressed: () {

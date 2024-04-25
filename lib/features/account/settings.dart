@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:rekoda_app/features/dashboard/existing_user.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:rekoda_app/features/login/pages/welcome_back.dart';
 
 
 class Settings extends StatelessWidget {
-  const Settings({super.key});
+  const Settings({Key? key});
+
+  Future<void> _logout(BuildContext context) async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+          (Route<dynamic> route) => false,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,24 +21,12 @@ class Settings extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
         title: const Text("Settings"),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.arrow_forward),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const ExistingUser()),
-              );
-            },
-          ),
-        ],
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 16.0),
@@ -39,23 +36,30 @@ class Settings extends StatelessWidget {
             title: Text(
               "General",
               style: TextStyle(
-                fontWeight: FontWeight.bold,
                 fontSize: 18.0,
               ),
             ),
           ),
           ListTile(
-            title: const Text("Reset Password"),
+            title: const Text(
+              "Reset Password",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
-              // Handle Reset Password action
             },
           ),
           ListTile(
-            title: const Text("Notifications"),
+            title: const Text(
+              "Notifications",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
-              // Handle Notifications action
             },
           ),
           // Security Section
@@ -63,40 +67,46 @@ class Settings extends StatelessWidget {
             title: Text(
               "Security",
               style: TextStyle(
-                fontWeight: FontWeight.bold,
                 fontSize: 18.0,
               ),
             ),
           ),
           ListTile(
-            title: const Text("Privacy Policy"),
+            title: const Text(
+              "Privacy Policy",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             trailing: const Icon(Icons.arrow_forward_ios),
             onTap: () {
-              // Handle Privacy Policy action
             },
           ),
           const ListTile(
             title: Text("Choose what data you share with us"),
           ),
           // Logout Button
-          const SizedBox(height: 20.0), // Add some space before the logout button
+          const SizedBox(height: 180.0),
           ElevatedButton(
             onPressed: () {
-              // Handle Logout action
+              _logout(context);
             },
             style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 12.0),
+              padding:
+              const EdgeInsets.symmetric(horizontal: 40.0, vertical: 12.0),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              backgroundColor: Colors.red, // Customize button color as needed
+              backgroundColor: Colors.white,
             ),
-            child: const Text(
+            child: Text(
               "Logout",
-              style: TextStyle(fontSize: 16.0),
+              style: TextStyle(
+                fontSize: 16.0,
+                color: const Color(0xFF1E429F),
+              ),
             ),
           ),
-          // Brees © 2021 v1.0
           const ListTile(
             title: Text(
               "Brees © 2021 v1.0",

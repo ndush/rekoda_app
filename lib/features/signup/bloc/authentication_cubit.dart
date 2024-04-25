@@ -14,7 +14,7 @@ class AuthenticationCubit extends Cubit<User?> {
       );
       emit(userCredential.user);
     } on FirebaseAuthException catch (e) {
-      // Handle FirebaseAuth errors
+
       if (e.code == 'weak-password') {
         print('The password provided is too weak.');
       } else if (e.code == 'email-already-in-use') {

@@ -101,7 +101,7 @@ class GetStarted extends StatelessWidget {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
-                      // Navigate to CreateAccountScreen
+
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const CreateAccountScreen()),

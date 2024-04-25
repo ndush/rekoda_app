@@ -45,7 +45,6 @@ class ExistingUser extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.notifications),
             onPressed: () {
-              // Handle notification icon tap
             },
           ),
         ],
@@ -213,7 +212,7 @@ class ExistingUser extends StatelessWidget {
                             height: 50,
                           ),
                         ),
-                        const SizedBox(width: 8), // Add space between image and text
+                        const SizedBox(width: 8),
 
                               const Text(
                                 'Rekoda Pro',
@@ -227,8 +226,8 @@ class ExistingUser extends StatelessWidget {
                               ),
                               const SizedBox(height: 8),
                               const Text(
-                                'Get access to all features\nwhen you upgrade', // Break text into two lines
-                                textAlign: TextAlign.center, // Adjust text alignment as needed
+                                'Get access to all features\nwhen you upgrade',
+                                textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
                                   fontSize: 12,
@@ -241,20 +240,20 @@ class ExistingUser extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const SizedBox(width: 4), // Add space between text and buttons
+                        const SizedBox(width: 4),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             IconButton(
                               onPressed: () {
-                                // Handle cancel icon tap
+
                               },
                               icon: const Icon(Icons.cancel, color: Colors.white),
                             ),
-                            const SizedBox(height: 8), // Add space between icon and button
+                            const SizedBox(height: 8),
                             ElevatedButton(
                               onPressed: () {
-                                // Handle "Get Pro" button tap
+
                               },
                               style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFFFFFFFF)),
@@ -267,7 +266,7 @@ class ExistingUser extends StatelessWidget {
                                   fontSize: 16,
                                   fontStyle: FontStyle.normal,
                                   fontWeight: FontWeight.w600,
-                                  height: 24 / 16, // line height calculation
+                                  height: 24 / 16,
                                 ),
                               ),
                             ),
@@ -287,23 +286,23 @@ class ExistingUser extends StatelessWidget {
                         const Text(
                           'Enter Your Business Goals',
                           style: TextStyle(
-                            color: Color(0xFF000000), // Title color
+                            color: Color(0xFF000000),
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Roboto',
                           ),
                         ),
-                        const SizedBox(height: 8), // Add space between title and subtitle
+                        const SizedBox(height: 8),
                         const Text(
                           'Stay motivated by setting a goal for your business',
                           style: TextStyle(
-                            color: Color(0xFF6D6D6D), // Subtitle color
+                            color: Color(0xFF6D6D6D),
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
                           ),
                         ),
-                        const SizedBox(height: 16), // Add space between subtitle and buttons
+                        const SizedBox(height: 16),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -317,19 +316,19 @@ class ExistingUser extends StatelessWidget {
                               ),
                               child: ElevatedButton(
                                 onPressed: () {
-                                  // Handle "Record Sales" button tap
+
                                 },
                                 style: ElevatedButton.styleFrom(
                                   elevation: 0,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10), // Adjust border radius as needed
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                  backgroundColor: const Color(0xffff3e5ff), // Background color of button
+                                  backgroundColor: const Color(0xffff3e5ff),
                                 ),
                                 child: const Text(
                                   'Record Sales',
                                   style: TextStyle(
-                                    color: Color(0xFF680DB3), // Button text color
+                                    color: Color(0xFF680DB3),
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -337,7 +336,7 @@ class ExistingUser extends StatelessWidget {
                               ),
 
                             ),
-                            const SizedBox(width: 16), // Add space between buttons
+                            const SizedBox(width: 16),
                             Container(
                               width: 153.767,
                               height: 37,
@@ -348,19 +347,19 @@ class ExistingUser extends StatelessWidget {
                               ),
                               child: ElevatedButton(
                                 onPressed: () {
-                                  // Handle "Record Expense" button tap
+
                                 },
                                 style: ElevatedButton.styleFrom(
                                   elevation: 0,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10), // Adjust border radius as needed
+                                    borderRadius: BorderRadius.circular(10),
                                   ),
-                                  backgroundColor: const Color(0xffff3e5ff), // Background color of button
+                                  backgroundColor: const Color(0xffff3e5ff),
                                 ),
                                 child: const Text(
                                   'Record Expense',
                                   style: TextStyle(
-                                    color: Color(0xFF680DB3), // Button text color
+                                    color: Color(0xFF680DB3),
                                     fontSize: 14,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -379,14 +378,14 @@ class ExistingUser extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const SizedBox(height: 16), // Add space at the top
+                          const SizedBox(height: 16),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               const Text(
                                 'Transaction History',
                                 style: TextStyle(
-                                  color: Color(0xFF000000), // Title color
+                                  color: Color(0xFF000000),
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Roboto',
@@ -395,12 +394,12 @@ class ExistingUser extends StatelessWidget {
                               const Spacer(),
                               TextButton(
                                 onPressed: () {
-                                  // Handle "See All" button tap
+
                                 },
                                 child: const Text(
                                   'See All',
                                   style: TextStyle(
-                                    color: Color(0xFF680DB3), // Button text color
+                                    color: Color(0xFF680DB3),
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: 'Roboto',
@@ -409,22 +408,22 @@ class ExistingUser extends StatelessWidget {
                               ),
                             ],
                           ),
-                          const SizedBox(height: 16), // Add space between "Transaction History" and buttons
+                          const SizedBox(height: 16),
                           SizedBox(
                             width: 380,
                             height: 48,
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16.0), // Equal horizontal padding
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
                               child: Container(
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(15),
                                   color: const Color(0xFFF5F5F5),
                                 ),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center, // Center the buttons
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Container(
-                                      width: 120, // Adjusted width to make space equal
+                                      width: 120,
                                       height: 40,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(15),
@@ -432,7 +431,7 @@ class ExistingUser extends StatelessWidget {
                                       ),
                                       child: ElevatedButton(
                                         onPressed: () {
-                                          // Handle "Sales" button tap
+
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 0,
@@ -444,7 +443,7 @@ class ExistingUser extends StatelessWidget {
                                         child: const Text(
                                           'Sales',
                                           style: TextStyle(
-                                            color: Color(0xFF680DB3), // Button text color
+                                            color: Color(0xFF680DB3),
                                             fontSize: 12,
                                             fontWeight: FontWeight.bold,
                                             fontFamily: 'Roboto',
@@ -453,9 +452,9 @@ class ExistingUser extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    const SizedBox(width: 16), // Add space between buttons
+                                    const SizedBox(width: 16),
                                     Container(
-                                      width: 150, // Adjusted width to make space equal
+                                      width: 150,
                                       height: 48,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(15),
@@ -463,7 +462,7 @@ class ExistingUser extends StatelessWidget {
                                       ),
                                       child: ElevatedButton(
                                         onPressed: () {
-                                          // Handle "Expense" button tap
+
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 0,
@@ -475,7 +474,7 @@ class ExistingUser extends StatelessWidget {
                                         child: const Text(
                                           'Expense',
                                           style: TextStyle(
-                                            color: Color(0xFFA3A4A4), // Button text color
+                                            color: Color(0xFFA3A4A4),
                                             fontSize: 12,
                                             fontWeight: FontWeight.bold,
                                             fontFamily: 'Roboto',
@@ -496,7 +495,7 @@ class ExistingUser extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 16), // Add space at the top
+                      const SizedBox(height: 16),
                       Row(
                         children: [
                           // Arrow down icon
@@ -504,7 +503,7 @@ class ExistingUser extends StatelessWidget {
                             Icons.arrow_downward,
                             color: Colors.grey,
                           ),
-                          const SizedBox(width: 8), // Add space between icon and text
+                          const SizedBox(width: 8),
                           // Title: "Automobiles"
                           const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -518,7 +517,7 @@ class ExistingUser extends StatelessWidget {
                                   fontFamily: 'Roboto',
                                 ),
                               ),
-                              // Subtitle: "April 04, 2024 05:32 am"
+
                               Text(
                                 'April 04, 2024 05:32 am',
                                 style: TextStyle(
@@ -530,7 +529,7 @@ class ExistingUser extends StatelessWidget {
                               ),
                             ],
                           ),
-                          const Spacer(), // Fill the space between subtitle and "N125.00" title
+                          const Spacer(),
                           // Title: "N125.00"
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
@@ -545,11 +544,11 @@ class ExistingUser extends StatelessWidget {
                                   fontFamily: 'Roboto',
                                 ),
                               ),
-                              // const SizedBox(height: 2), // Add space between "N125.00" and "Completed" button
-                              // "Completed" button
+
+
                               ElevatedButton(
                                 onPressed: () {
-                                  // Handle "Completed" button tap
+
                                 },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color(0xFF33CC4B),
@@ -598,7 +597,7 @@ class ExistingUser extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.dashboard, color: Colors.white),
                         onPressed: () {
-                          // Handle dashboard action
+
                         },
                       ),
                       const Text('Dashboard', style: TextStyle(color: Colors.white)),
@@ -612,7 +611,7 @@ class ExistingUser extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.assignment, color: Colors.white),
                         onPressed: () {
-                          // Navigate to Expenses screen
+
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => const Expenses()),
@@ -648,7 +647,7 @@ class ExistingUser extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.person, color: Colors.white),
                         onPressed: () {
-                          // Handle profile action
+
                         },
                       ),
                       const Text('Profile', style: TextStyle(color: Colors.white)),

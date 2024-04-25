@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:rekoda_app/features/login/pages/welcome_back.dart';
 import 'package:rekoda_app/shared/widget/custom_text_field.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/gestures.dart';
@@ -28,7 +29,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        automaticallyImplyLeading: false, // Remove back arrow
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20.0),
@@ -73,11 +74,20 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                     ),
-                    recognizer: TapGestureRecognizer()..onTap = () {},
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginScreen(),
+                          ),
+                        );
+                      },
                   ),
                 ],
               ),
             ),
+
 
             const SizedBox(height: 20),
             CustomTextField(
@@ -150,10 +160,10 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                   Container(
                     width: double.infinity,
                     height: 44,
-                    padding: const EdgeInsets.symmetric(horizontal: 24.0), // Adjusted padding
+                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: const Color(0xFF680DB3), // Background color
+                      color: const Color(0xFF680DB3),
                     ),
                     child: TextButton(
                       onPressed: _signup,
@@ -236,13 +246,12 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
           password: password,
         );
 
-        // Send email verification
         await userCredential.user!.sendEmailVerification();
 
-        // Store user data in Firestore
+
         await _storeUserData(emailAddress, name);
 
-        // Navigate to VerifyAccount screen
+
         Navigator.push(
           context,
           MaterialPageRoute(
@@ -250,7 +259,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
           ),
         );
 
-        // Inform the user about successful registration
+
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text(
@@ -258,8 +267,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
           ),
         );
       } catch (e) {
-        // Handle registration errors
-        print('Error registering user: $e');
+
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text(

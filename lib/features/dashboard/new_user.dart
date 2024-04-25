@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rekoda_app/features/Transactions/custom_bottom_navigation_bar.dart';
-import 'package:rekoda_app/features/reports/report.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:rekoda_app/features/Transactions/expenses.dart';
+
 
 class NewUser extends StatelessWidget {
   const NewUser({super.key});
@@ -25,7 +27,7 @@ class NewUser extends StatelessWidget {
               ),
             ),
             Text(
-              'John', // Replace 'John' with the actual user name
+              'Enny',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 16,
@@ -38,118 +40,244 @@ class NewUser extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.notifications),
             onPressed: () {
-              // Handle notification icon tap
+
             },
           ),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Card(
-              color: const Color(0xFF680DB3),
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(height: 20),
+              SizedBox(
+                width: double.infinity,
+                height: 156,
+                child: Stack(
                   children: [
-                    const Text(
-                      'Sales | Expenses',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                    Positioned(
+                      left: 0,
+                      top: 0,
+                      bottom: 0,
+                      child: Container(
+                        width: 20,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/pattern.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    const Text(
-                      'Balance: \$0.00',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
+                    Positioned(
+                      right: 0,
+                      top: 0,
+                      bottom: 0,
+                      child: Container(
+                        width: 20,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/pattern.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
                       ),
                     ),
-                    const SizedBox(height: 20),
-                    ElevatedButton(
-                      onPressed: () {
-                        // Handle Start Transacting button tap
-                      },
-                      style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        backgroundColor: const Color(0xFF680DB3),
-                      ),
-                      child: const Text(
-                        'Start Transacting',
-                        style: TextStyle(
-                          fontSize: 16,
-                        ),
+                    SizedBox(
+                      width: 380,
+                      height: 156,
+                      child: Stack(
+                        children: [
+                          Image.asset(
+                            'assets/dash.png',
+                            width: 380,
+                            height: 156,
+                            fit: BoxFit.cover,
+                          ),
+                          Center(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Text(
+                                  'Sales | Expenses',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(height: 8),
+                                const Text(
+                                  ' 0.00',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 32,
+                                  ),
+                                ),
+                                const SizedBox(height: 20),
+                                ElevatedButton(
+                                  onPressed: () {
+
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    backgroundColor: const Color(0xFF4D0573),
+                                  ),
+                                  child: const Text(
+                                    'Start Transacting',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Positioned(
+                            left: 0,
+                            top: 0,
+                            bottom: 0,
+                            child: Container(
+                              width: 50,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('assets/pattern.png'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            right: 0,
+                            top: 0,
+                            bottom: 0,
+                            child: Container(
+                              width: 50,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('assets/pattern.png'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    'Transaction History',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                    ),
+              const SizedBox(height: 16),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: Text(
+                  'Quick Actions',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
                   ),
-                  TextButton(
-                    onPressed: () {
-                      // Handle See all button tap
-                    },
-                    child: const Text(
-                      'See all',
+                ),
+              ),
+              const SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    QuickAction(
+                      icon: SvgPicture.asset('assets/s.svg', width: 24, height: 24),
+                      label: 'Sales',
+                      onPressed: () {
+
+                      },
+                    ),
+                    QuickAction(
+                      icon: SvgPicture.asset('assets/e.svg', width: 24, height: 24),
+                      label: 'Expense',
+                      onPressed: () {
+
+                      },
+                    ),
+                    QuickAction(
+                      icon: SvgPicture.asset('assets/r.svg', width: 24, height: 24),
+                      label: 'Report',
+                      onPressed: () {
+
+                      },
+                    ),
+                    QuickAction(
+                      icon: SvgPicture.asset('assets/t.svg', width: 24, height: 24),
+                      label: 'Template',
+                      onPressed: () {
+
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      'Transaction History',
                       style: TextStyle(
-                        color: Colors.blue,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'See all',
+                        style: TextStyle(
+                          color: Color(0xFF680DB3),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Color(0xFF680DB3),
+                    ),
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>  const Expenses()),
+                        );
+                      },
+                      backgroundColor: Colors.transparent,
+                      child: const Icon(Icons.add),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  const Text(
+                    'Add Transaction',
+                    style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
                 ],
               ),
-            ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFF680DB3), // Circular background color
-                  ),
-                  child: FloatingActionButton(
-                    onPressed: () {
-                      // Handle Add Transaction button tap
-                    },
-                    backgroundColor: Colors.transparent, // Make the button background transparent
-                    child: const Icon(Icons.add),
-                  ),
-                ),
-                const SizedBox(width: 8), // Add some space between the button and the text
-                const Text(
-                  'Add Transaction',
-                  style: TextStyle(fontSize: 16, color: Colors.black), // Set the text color to white
-                ),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -159,19 +287,21 @@ class NewUser extends StatelessWidget {
 }
 
 class QuickAction extends StatelessWidget {
-  final IconData icon;
+  final Widget icon;
   final String label;
+  final Function() onPressed;
 
-  const QuickAction({super.key, required this.icon, required this.label});
+  const QuickAction({super.key, required this.icon, required this.label, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(
-          icon,
-          size: 32,
-          color: Colors.blue, // Adjust color as needed
+        IconButton(
+          onPressed: onPressed,
+          icon: icon,
+          iconSize: 32,
+          color: Colors.blue,
         ),
         const SizedBox(height: 8),
         Text(

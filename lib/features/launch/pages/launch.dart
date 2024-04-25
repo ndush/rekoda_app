@@ -24,14 +24,14 @@ class LaunchPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 200.0), // Adjust top padding as needed
+          padding: const EdgeInsets.only(bottom: 200.0),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 350, // Adjust height as needed
-                  width: 350, // Adjust width as needed
+                  height: 350,
+                  width: 350,
                   child: Assets.launch.image(),
                 ),
               ],

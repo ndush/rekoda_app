@@ -4,6 +4,33 @@ import 'package:rekoda_app/features/Transactions/existing_user_expense.dart';
 class AddExpense extends StatelessWidget {
   const AddExpense({super.key});
 
+
+
+  void _showSuccessDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text("Expense Added Successfully"),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>  const ExistingUserExpense(),
+                  ),
+                );
+              },
+              child: const Text("Continue"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +46,7 @@ class AddExpense extends StatelessWidget {
         title: const Text(
           'Add Expense',
           style: TextStyle(
-            color: Color(0xFF1F2A37), // Use custom gray color
+            color: Color(0xFF1F2A37),
             fontSize: 18,
             fontWeight: FontWeight.bold,
             fontFamily: 'Roboto',
@@ -43,7 +70,7 @@ class AddExpense extends StatelessWidget {
                         const Text(
                           'Receipt Number',
                           style: TextStyle(
-                            color: Color(0xFF111928), // Use custom gray color
+                            color: Color(0xFF111928),
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
@@ -53,9 +80,9 @@ class AddExpense extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                            color: const Color(0xFFBCBBC1).withOpacity(0.2),
                           ),
-                          child: const TextField(
+                          child:    const TextField(
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
                               border: InputBorder.none,
@@ -73,7 +100,7 @@ class AddExpense extends StatelessWidget {
                         const Text(
                           'Date',
                           style: TextStyle(
-                            color: Color(0xFF111928), // Use custom gray color
+                            color: Color(0xFF111928),
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             fontFamily: 'Roboto',
@@ -83,9 +110,9 @@ class AddExpense extends StatelessWidget {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                            color: const Color(0xFFBCBBC1).withOpacity(0.2),
                           ),
-                          child: const TextField(
+                          child:    const TextField(
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
                               border: InputBorder.none,
@@ -101,7 +128,7 @@ class AddExpense extends StatelessWidget {
               const Text(
                 'Product/Service',
                 style: TextStyle(
-                  color: Color(0xFF111928), // Use custom gray color
+                  color: Color(0xFF111928),
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Roboto',
@@ -111,7 +138,7 @@ class AddExpense extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                  color: const Color(0xFFBCBBC1).withOpacity(0.2),
                 ),
                 child: const TextField(
                   decoration: InputDecoration(
@@ -124,7 +151,7 @@ class AddExpense extends StatelessWidget {
               const Text(
                 'Amount',
                 style: TextStyle(
-                  color: Color(0xFF111928), // Use custom gray color
+                  color: Color(0xFF111928),
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Roboto',
@@ -134,14 +161,14 @@ class AddExpense extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
+                  color: const Color(0xFFBCBBC1).withOpacity(0.2),
                 ),
                 child: const Row(
                   children: [
                     Text(
                       '0.00 ',
                       style: TextStyle(
-                        color: Color(0xFF111928), // Use custom gray color
+                        color: Color(0xFF111928),
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                         fontFamily: 'Roboto',
@@ -158,7 +185,7 @@ class AddExpense extends StatelessWidget {
                     Text(
                       'NGN',
                       style: TextStyle(
-                        color: Color(0xFF111928), // Use custom gray color
+                        color: Color(0xFF111928),
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                         fontFamily: 'Roboto',
@@ -171,40 +198,40 @@ class AddExpense extends StatelessWidget {
               const Text(
                 'Payment Method',
                 style: TextStyle(
-                  color: Color(0xFF111928), // Use custom gray color
+                  color: Color(0xFF111928),
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Roboto',
                 ),
               ),
               const SizedBox(height: 8),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: const Color(0xFFBCBBC1).withOpacity(0.2), // Use custom gray color
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextField(
-                          controller: TextEditingController(text: 'Select Option'), // Assign the controller here
-                          decoration: const InputDecoration(
-                            contentPadding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
-                            border: InputBorder.none,
-                            hintText: 'Select Option',
-                            suffixIcon: Icon(Icons.arrow_drop_down),
-                          ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: const Color(0xFFBCBBC1).withOpacity(0.2),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: TextEditingController(text: 'Select Option'),
+                        decoration: const InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+                          border: InputBorder.none,
+                          hintText: 'Select Option',
+                          suffixIcon: Icon(Icons.arrow_drop_down),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
+              ),
 
               const SizedBox(height: 16),
               const Text(
                 'Note/ Additional information',
                 style: TextStyle(
-                  color: Color(0xFF111928), // Use custom gray color
+                  color: Color(0xFF111928),
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   fontFamily: 'Roboto',
@@ -214,7 +241,7 @@ class AddExpense extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: const Color(0xFF888888)), // Use custom gray color
+                  border: Border.all(color: const Color(0xFF888888)),
                   color: Colors.white,
                 ),
                 child: const SizedBox(
@@ -232,24 +259,16 @@ class AddExpense extends StatelessWidget {
               ),
 
               const SizedBox(height: 16),
-              // New Widget: "Add Expense" Button
               Container(
                 width: 370,
                 height: 44,
-                // padding: EdgeInsets.symmetric(vertical: 8, horizontal: 166),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: const Color(0xFF680DB3), // Use custom purple color
+                  color: const Color(0xFF680DB3),
                 ),
                 child: TextButton(
                   onPressed: () {
-
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ExistingUserExpense(),
-                      ),
-                    );
+                    _showSuccessDialog(context);
                   },
 
                   child: const Text(

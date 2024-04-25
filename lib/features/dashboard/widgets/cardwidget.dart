@@ -38,7 +38,7 @@ class CardWidget extends StatelessWidget {
                   },
                 ),
                 PopupMenuButton<String>(
-                  icon: const Icon(Icons.more_vert), // Vertical dots icon
+                  icon: const Icon(Icons.more_vert),
                   itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
                     const PopupMenuItem<String>(
                       value: 'Edit',
@@ -58,7 +58,7 @@ class CardWidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                title, // Sample text, replace with your content
+                title,
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,

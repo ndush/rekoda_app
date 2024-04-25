@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 
 class UserView extends StatelessWidget {
-  const UserView({super.key});
+  const UserView({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    // Replace these dummy user details with actual user details
-    String name = "John Doe";
-    String email = "john.doe@example.com";
-    String phoneNumber = "1234567890";
+
+    String name = "enny";
+    String email = "enny@mail.com";
+    String phoneNumber = "01234567890";
 
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.of(context).pop();
           },
@@ -43,7 +43,7 @@ class UserView extends StatelessWidget {
                   const Text(
                     'Name',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+
                       fontSize: 16,
                     ),
                   ),
@@ -52,13 +52,14 @@ class UserView extends StatelessWidget {
                     name,
                     style: const TextStyle(
                       fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                   const SizedBox(height: 16),
                   const Text(
                     'Email',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+
                       fontSize: 16,
                     ),
                   ),
@@ -66,6 +67,7 @@ class UserView extends StatelessWidget {
                   Text(
                     email,
                     style: const TextStyle(
+                      fontWeight: FontWeight.bold,
                       fontSize: 16,
                     ),
                   ),
@@ -73,7 +75,7 @@ class UserView extends StatelessWidget {
                   const Text(
                     'Phone Number',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+
                       fontSize: 16,
                     ),
                   ),
@@ -82,25 +84,33 @@ class UserView extends StatelessWidget {
                     phoneNumber,
                     style: const TextStyle(
                       fontSize: 16,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(height: 20), // Added space for the button
-                  ElevatedButton(
-                    onPressed: () {
-                      // Handle save button tap
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10), // Adjust padding as needed
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30), // Rounded button
-                      ),
-                      backgroundColor: const Color(0xFFE9E9FF), // Background color
+                  const SizedBox(height: 200.0),
+                  Container(
+                    width: 335,
+                    height: 64,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(99),
+                      color: const Color(0xFFE9E9FF),
                     ),
-                    child: const Text(
-                      'Save',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black, // Text color
+                    child: ElevatedButton(
+                      onPressed: () {
+
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(32.0),
+                        ),
+                          backgroundColor: Color(0xFFE9E9FF)
+                      ),
+                      child: Text(
+                        "Save",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: const Color(0xFF1E429F),
+                        ),
                       ),
                     ),
                   ),
@@ -112,9 +122,6 @@ class UserView extends StatelessWidget {
               right: 140,
               child: GestureDetector(
                 onTap: () {
-                  // Handle the camera icon tap here (e.g., show image picker)
-                  // For simplicity, let's just print a message for now
-                  print('Camera icon clicked');
                 },
                 child: Container(
                   decoration: BoxDecoration(

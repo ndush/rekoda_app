@@ -23,7 +23,7 @@ class Report extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.more_vert),
             onPressed: () {
-              // Handle three dots action
+
             },
           ),
         ],
@@ -42,7 +42,6 @@ class Report extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        // Handle "This Week" button tap
                       },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(const Color(0xFF680DB3)),
@@ -67,7 +66,7 @@ class Report extends StatelessWidget {
                     const SizedBox(width: 8),
                     ElevatedButton(
                       onPressed: () {
-                        // Handle "Last Week" button tap
+
                       },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
@@ -92,7 +91,7 @@ class Report extends StatelessWidget {
                     const SizedBox(width: 8),
                     ElevatedButton(
                       onPressed: () {
-                        // Handle "Last Month" button tap
+
                       },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
@@ -117,7 +116,7 @@ class Report extends StatelessWidget {
                     const SizedBox(width: 8),
                     ElevatedButton(
                       onPressed: () {
-                        // Handle "Last Year" button tap
+
                       },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
@@ -315,7 +314,7 @@ class Report extends StatelessWidget {
                 fontStyle: FontStyle.normal,
                 fontWeight: FontWeight.w400,
                 letterSpacing: 1,
-                // textAlign: TextAlign.center,
+
               ),
             ),
           ),

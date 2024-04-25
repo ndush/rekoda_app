@@ -41,6 +41,4 @@ class AuthRepository {
     return _firebaseAuth.currentUser;
   }
 
-// Add more authentication methods as needed
-
 }

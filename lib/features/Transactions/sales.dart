@@ -62,7 +62,7 @@ class _SalesState extends State<Sales> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const AddSales()), // Navigate to AddExpense screen
+            MaterialPageRoute(builder: (context) => const AddSales()),
           );
         },
         backgroundColor: const Color(0xFF680DB3),

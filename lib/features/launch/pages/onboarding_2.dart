@@ -28,29 +28,29 @@ class Onboarding2 extends StatelessWidget {
 
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 5),
-                    width: 20, // Adjust width as needed
-                    height: 10, // Adjust height as needed
+                    width: 20,
+                    height: 10,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey,// Circular edges
+                      color: Colors.grey,
 
                     ),
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 5),
-                    width: 20, // Adjust width as needed
-                    height: 10, // Adjust height as needed
+                    width: 20,
+                    height: 10,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5), // Circular edges
+                      borderRadius: BorderRadius.circular(5),
                       color: const Color(0xFF680DB3),
                     ),
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 5),
-                    width: 20, // Adjust width as needed
-                    height: 10, // Adjust height as needed
+                    width: 20,
+                    height: 10,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5), // Circular edges
+                      borderRadius: BorderRadius.circular(5),
                       color: Colors.grey,
                     ),
                   ),
@@ -80,7 +80,7 @@ class Onboarding2 extends StatelessWidget {
                         fontFamily: 'Roboto',
                         fontSize: 24,
                         fontWeight: FontWeight.w500,
-                        height: 1.2, // 120% line-height
+                        height: 1.2,
                         color: Color(0xFF2A3143),
                       ),
                     ),
@@ -88,7 +88,7 @@ class Onboarding2 extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 100), // Added some extra space at the bottom
+              const SizedBox(height: 100),
             ],
           ),
         ),
@@ -103,7 +103,7 @@ class Onboarding2 extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  // Handle skip button tap
+
                 },
                 child: const Text(
                   'Skip',
@@ -125,7 +125,7 @@ class Onboarding2 extends StatelessWidget {
                   const SizedBox(width: 5),
                   IconButton(
                     onPressed: () {
-                      Navigator.push( // Navigate to Onboarding2 page
+                      Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => const GetStarted()),
                       );
